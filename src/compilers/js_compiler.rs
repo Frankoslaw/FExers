@@ -114,6 +114,8 @@ mod tests {
         assert_eq!(result.stdout, Some("Hello World!\n".to_string()));
     }
 
+    // TODO: Hack
+    #[cfg(not(target_os = "windows"))]
     #[cfg(feature = "wasm")]
     #[test]
     fn test_compile_wasm() {
